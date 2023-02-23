@@ -1,3 +1,13 @@
 the magic compile command to get it working: g++ main.cpp -o main.exe -O1 -Wall -Wno-missing-braces -I include/ -L lib/ -lraylib -lopengl32 -lgdi32 -lwinmm
 use ./main.exe to run afterwords
 change "-O1" to "-O2" or "-O3" for better optimization
+
+Most Important Part:
+look at: https://www.youtube.com/watch?v=u6LXRF-iMg8
+go to raylib/raylib/src
+enter command prompt there
+run "mingw32-make clean"
+run "mingw32-make PLATFORM=PLATFORM_DESKTOP"
+if getting errors, reinstall mingw (x64 version!) from https://winlibs.com/#download-release
+take the libraylib.a and raylib.h files from src, put them into new "lib" and "include" folders in project, respectively
+profit
